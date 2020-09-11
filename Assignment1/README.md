@@ -1,0 +1,1 @@
+In This Assignment, we have to read an object file and load it using openGL and c++
