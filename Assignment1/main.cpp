@@ -30,19 +30,9 @@ void read_object_file(){
 
 void display(){
 	glClear(GL_COLOR_BUFFER_BIT);
-	//glColor3f(1,0,0);
 	glScalef(2,2,2);
 	glColor3d(1.0, 1.0, 1.0);
 	glBegin(GL_TRIANGLES);
-	for(int i=0;i<faces.size();i++){
-		for(int j=0;j<3;j++){
-			vector<double>v=vertices[faces[i][j]];
-			glVertex3d(v[0],v[1],v[2]);
-		}
-	}
-	glEnd();
-	glColor3f(0.0, 0.0, 1.0);
-	glBegin(GL_LINES);
 	for(int i=0;i<faces.size();i++){
 		for(int j=0;j<3;j++){
 			vector<double>v=vertices[faces[i][j]];
