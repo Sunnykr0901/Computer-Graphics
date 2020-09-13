@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 #include<stdio.h>
 #include<stdlib.h>
+#include<GL/gl.h>
 #include<GL/glut.h>
 using namespace std;
 
@@ -29,7 +30,9 @@ void read_object_file(){
 
 void display(){
 	glClear(GL_COLOR_BUFFER_BIT);
-	glColor3f(1,0,0);
+	//glColor3f(1,0,0);
+	glScalef(2,2,2);
+	glColor3d(1.0, 1.0, 1.0);
 	glBegin(GL_TRIANGLES);
 	for(int i=0;i<faces.size();i++){
 		for(int j=0;j<3;j++){
@@ -37,9 +40,15 @@ void display(){
 			glVertex3d(v[0],v[1],v[2]);
 		}
 	}
-	/*glColor3f(1,0,0); glVertex2f(-0.6,0);
-	glColor3f(0,1,0); glVertex2f(0.6,-0.75);
-	glColor3f(0,0,1); glVertex2f(0,0.75);*/
+	glEnd();
+	glColor3f(0.0, 0.0, 1.0);
+	glBegin(GL_LINES);
+	for(int i=0;i<faces.size();i++){
+		for(int j=0;j<3;j++){
+			vector<double>v=vertices[faces[i][j]];
+			glVertex3d(v[0],v[1],v[2]);
+		}
+	}
 	glEnd();
 	glFlush();
 }
