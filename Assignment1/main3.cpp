@@ -41,18 +41,36 @@ void draw(){
 	glPushMatrix();
 	glScalef(4,4,4);
 	glRotatef(angle,0,1,0);
-
+	glColor3f(0.8,0.8,0.8);
 	glBegin(GL_TRIANGLES);
 	for(int i=0;i<faces.size();i++){
 		vector<double>v=vertices[faces[i][0]];
-		glColor3f(1,0,1); glVertex3f(v[0],v[1],v[2]);
+		glVertex3f(v[0],v[1],v[2]);
 		v=vertices[faces[i][1]];
-		glColor3f(0,0,1); glVertex3f(v[0],v[1],v[2]);
+		glVertex3f(v[0],v[1],v[2]);
 		v=vertices[faces[i][2]];
-		glColor3f(0,1,0); glVertex3f(v[0],v[1],v[2]);
+		glVertex3f(v[0],v[1],v[2]);
 	}
 	glEnd();
 
+	glLineWidth(1.0);
+	glColor3f(0.0,0.0,0.0);
+	glBegin(GL_LINES);
+	for(int i=0;i<faces.size();i++){
+		vector<double>v=vertices[faces[i][0]];
+		glVertex3f(v[0],v[1],v[2]);
+		v=vertices[faces[i][1]];
+		glVertex3f(v[0],v[1],v[2]);
+		v=vertices[faces[i][1]];
+		glVertex3f(v[0],v[1],v[2]);
+		v=vertices[faces[i][2]];
+		glVertex3f(v[0],v[1],v[2]);
+		v=vertices[faces[i][2]];
+		glVertex3f(v[0],v[1],v[2]);
+		v=vertices[faces[i][0]];
+		glVertex3f(v[0],v[1],v[2]);
+	}
+	glEnd();
 	glPopMatrix();
 	glFlush();
 }
