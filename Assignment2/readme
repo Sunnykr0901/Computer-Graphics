@@ -1,0 +1,7 @@
+In This Assignment, we have to create a 3D model and using mouse we should be able to zoom and rotate it.
+
+Steps to compile and run::
+
+1.> lowpolybunny.obj file and main.cpp both must be in same folder.
+2.> run the command:: g++ main.cpp -lGL -lGLU -lglut (use g++ only, in my laptop for this gcc doesn't work but you can try to run it using gcc)
+3.> Then type:: ./a.out and click Enter Key
