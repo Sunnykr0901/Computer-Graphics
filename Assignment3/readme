@@ -1,0 +1,19 @@
+How to run::
+
+Command 1>
+	gcc main.cpp -lGL -lGLU -lglut
+				OR
+	g++ main.cpp -lGL -lGLU -lglut
+
+Command 2>
+	./a.out
+
+Note:- Please right click your mouse, you will get 2 options
+		1.> No shadow
+		2.> Shadow
+
+		If you click on "Shadow" then shadows of spheres will come.
+		If you click on "No Shadow" then shadows of spheres will be removed.
+
+
+		If you have issues regarding how to generate above 2 options, please contact me sunny170101068@iitg.ac.in
